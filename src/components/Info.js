@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Info = ({ name, product, description }) => {
-    console.log("this are the values: ", name, product, description)
+    // console.log("this are the values: ", name, product, description)
     return (
         <div >
             <p>{name}</p>

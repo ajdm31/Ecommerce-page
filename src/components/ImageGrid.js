@@ -1,19 +1,22 @@
 import React from 'react'
 
-const ImageGrid = ({ images, onSelect, selectedImage }) => {
-    console.log("heyhey", images)
+const ImageGrid = ({ images, onSelect, selectedImage, onIndex }) => {
+    // console.log("heyhey", images)
     return (
-
-        <div>
+        <div  >
             {images.map((image, index) => (
                 <div
-                    class="gridImagesData"
-                    onClick={() => onSelect(index)}
-                    style={{ border: index === selectedImage ? "solid 1px black" : "solid 1px #eee", cursor: "pointer", width: "50%" }}
 
+                    class="gridImagesData"
+                    onClick={() => {
+                        onSelect(index);
+
+                        onIndex(index)
+                    }}
+                    style={{ borderTop: index === selectedImage ? "solid 2px black" : "solid 1px #eee", color: index === selectedImage ? "black" : " gray" }}
                 >
-                    {image.id}
-                    {image.product}
+                    <h6>{image.id}</h6>
+                    <h6>{image.product}</h6>
                 </div>
             ))}
         </div>

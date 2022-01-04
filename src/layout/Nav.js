@@ -6,6 +6,16 @@ import '../assets/css/styles.css';
 const Nav = () => {
 
     const [active, setActive] = useState(false);
+    const [path, setPath] = useState('/');
+
+    const handleMenu = () => {
+        if (path === '/') {
+            setPath("/market")
+        }
+        else {
+            setPath("/")
+        }
+    }
 
 
     return (
@@ -19,8 +29,7 @@ const Nav = () => {
                 </div>
                 {/* links */}
                 <ul class="links">
-                    <NavLink to="/" style={{ color: "black" }}>Home</NavLink>
-                    <NavLink to="/market" style={{ color: "black" }}>market</NavLink>
+                    <NavLink onClick={() => handleMenu()} to={path} style={{ color: "black" }}>X</NavLink>
                 </ul>
 
             </div>
