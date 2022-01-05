@@ -44,7 +44,7 @@ const Home = ({ path }) => {
     const handleShowImg = () => {
         setDisplayImg(!displayImg)
         if (displayImg === true) {
-            let timeout = setTimeout(() => {
+            setTimeout(() => {
                 document.getElementById("ImgContainerHome").style.opacity = 1;
                 document.getElementById("ImgContainerHome").style.transition = "opacity 2s ease";
             }, 1000);
@@ -57,7 +57,7 @@ const Home = ({ path }) => {
 
     const handleInfoContEffect = (value) => {
         if (value === '#t2') {
-            let timeout = setTimeout(() => {
+            setTimeout(() => {
                 document.getElementById("infoContainerHome").style.opacity = 1;
                 document.getElementById("infoContainerHome").style.transition = "opacity 2s ease";
             }, 1000);
@@ -74,7 +74,7 @@ const Home = ({ path }) => {
             document.getElementById("list").style.transition = "opacity 0s ease";
 
         } else {
-            let timeout = setTimeout(() => {
+            setTimeout(() => {
                 document.getElementById("list").style.opacity = 1;
                 document.getElementById("list").style.transition = "opacity 1.5s ease";
                 document.getElementById("ImgContainerHome").style.opacity = 1;

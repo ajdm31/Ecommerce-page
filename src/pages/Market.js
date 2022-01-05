@@ -26,7 +26,7 @@ const Market = ({ path }) => {
     const length = ImageData.length;
 
     useEffect(() => {
-        let timeout = setTimeout(() => {
+        setTimeout(() => {
             document.getElementById("infoText").style.opacity = 1;
             document.getElementById("infoText").style.transition = "opacity 1s ease";
             let displayImg = document.getElementById("ImgContainer").style.opacity = 1
@@ -45,7 +45,7 @@ const Market = ({ path }) => {
         document.getElementById("infoText").style.transition = "opacity 0s ease";
         let displayImg = document.getElementById("ImgContainer").style.opacity = 0
         displayImg = document.getElementById("ImgContainer").style.transition = 'opacity 0s ease'
-        let timeout = setTimeout(() => {
+        setTimeout(() => {
             document.getElementById("infoText").style.opacity = 1;
             document.getElementById("infoText").style.transition = "opacity 1s ease";
             displayImg = document.getElementById("ImgContainer").style.opacity = 1
@@ -119,7 +119,8 @@ const Market = ({ path }) => {
             <footer class="footer" style={{ display: displayFooter === true ? 'block' : 'none' }}>
                 <div  >
                     {ImageData.map((image, index) => (
-                        <div>
+                        <div >
+
                             <div
                                 class="gridImagesData"
                                 onClick={() => {
